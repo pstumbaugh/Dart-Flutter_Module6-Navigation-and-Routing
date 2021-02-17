@@ -1,4 +1,6 @@
 import 'imports.dart';
+import 'beta.dart';
+import 'alpha.dart';
 
 class Donut extends StatelessWidget {
   static const routeName = 'donut';
@@ -10,15 +12,15 @@ class Donut extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         textPlaceholder(context),
-        backToAlpha(context),
-        donutButton(context)
+        alphaButton(context),
+        betaButton(context)
       ],
     ));
   }
 }
 
-void backToAlpha(BuildContext context) {
-  Navigator.of(context).pop();
+void pushAlpha(BuildContext context) {
+  Navigator.of(context).pushNamed(Alpha.routeName);
 }
 
 void pushBeta(BuildContext context) {
@@ -26,5 +28,23 @@ void pushBeta(BuildContext context) {
 }
 
 Widget textPlaceholder(BuildContext context) {
-  return Text('Alpha', style: Theme.of(context).textTheme.display4);
+  return Text('Donut', style: Theme.of(context).textTheme.display4);
+}
+
+Widget alphaButton(BuildContext context) {
+  return RaisedButton(
+    child: Text('Alpha'),
+    onPressed: () {
+      pushAlpha(context);
+    },
+  );
+}
+
+Widget betaButton(BuildContext context) {
+  return RaisedButton(
+    child: Text('Beta'),
+    onPressed: () {
+      pushBeta(context);
+    },
+  );
 }

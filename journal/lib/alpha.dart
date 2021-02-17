@@ -30,3 +30,21 @@ void pushDonut(BuildContext context) {
 Widget textPlaceholder(BuildContext context) {
   return Text('Alpha', style: Theme.of(context).textTheme.display4);
 }
+
+Widget betaButton(BuildContext context) {
+  return RaisedButton(
+    child: Text('Beta'),
+    onPressed: () {
+      pushBeta(context);
+    },
+  );
+}
+
+Widget donutButton(BuildContext context) {
+  return RaisedButton(
+    child: Text('Donut'),
+    onPressed: () {
+      pushDonut(context);
+    },
+  );
+}

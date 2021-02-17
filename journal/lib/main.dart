@@ -1,4 +1,7 @@
 import 'imports.dart';
+import 'alpha.dart';
+import 'beta.dart';
+import 'donut.dart';
 
 void main() {
   runApp(MyApp());

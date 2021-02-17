@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'beta.dart';
 import 'donut.dart';
 
 class Beta extends StatelessWidget {
@@ -21,7 +20,8 @@ class Beta extends StatelessWidget {
   }
 }
 
-void backToAlpha(BuildContext context) {
+//example of going back one
+void goBackToAlpha(BuildContext context) {
   Navigator.of(context).pop();
 }
 
@@ -30,5 +30,23 @@ void pushDonut(BuildContext context) {
 }
 
 Widget textPlaceholder(BuildContext context) {
-  return Text('Alpha', style: Theme.of(context).textTheme.display4);
+  return Text('Beta', style: Theme.of(context).textTheme.display4);
+}
+
+Widget backToAlpha(BuildContext context) {
+  return RaisedButton(
+    child: Text('Alpha'),
+    onPressed: () {
+      goBackToAlpha(context);
+    },
+  );
+}
+
+Widget donutButton(BuildContext context) {
+  return RaisedButton(
+    child: Text('Donut'),
+    onPressed: () {
+      pushDonut(context);
+    },
+  );
 }
