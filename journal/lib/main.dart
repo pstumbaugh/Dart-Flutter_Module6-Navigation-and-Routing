@@ -23,3 +23,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+void popBack(BuildContext context) {
+  Navigator.of(context).pop();
+}
+
+Widget goBackButton(BuildContext context) {
+  return RaisedButton(
+    child: Text('Go Back'),
+    onPressed: () {
+      popBack(context);
+    },
+  );
+}

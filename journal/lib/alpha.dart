@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-
+import 'imports.dart';
 import 'beta.dart';
 import 'donut.dart';
 
@@ -13,7 +12,7 @@ class Alpha extends StatelessWidget {
       children: [
         textPlaceholder(context),
         betaButton(context),
-        donutButton(context)
+        donutButton(context),
       ],
     ));
   }

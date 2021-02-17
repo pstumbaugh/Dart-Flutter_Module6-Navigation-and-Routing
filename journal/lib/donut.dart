@@ -13,7 +13,8 @@ class Donut extends StatelessWidget {
       children: [
         textPlaceholder(context),
         alphaButton(context),
-        betaButton(context)
+        betaButton(context),
+        goBackButton(context)
       ],
     ));
   }
