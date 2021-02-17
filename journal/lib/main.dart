@@ -1,15 +1,22 @@
-import 'package:flutter/material.dart';
-import 'screens/alpha.dart';
+import 'imports.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  static final routes = {
+    Alpha.routeName: (context) => Alpha(), // '/' denotes initial router (home)
+    Beta.routeName: (context) => Beta(),
+    Donut.routeName: (context) => Donut()
+  };
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Journal', theme: ThemeData.dark(), home: Alpha());
+      title: 'Journal',
+      theme: ThemeData.dark(),
+      routes: routes,
+    );
   }
 }
